@@ -8,12 +8,13 @@ Login
 
 
 <div class="container">
-    <h1>User Login</h1>
+    <h2>User Login</h2>
     <form method="POST">
         {% csrf_token %}
         {{form.as_p}}
         <input class="btn btn-primary" type="submit" value="Login">
     </form>
+    <a class="btn btn-outline-primary" href="{% url 'register' %}">Don't have an account?</a>
 </div>
 
 {% endblock %}

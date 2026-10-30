@@ -12,6 +12,6 @@ class TweetForm(forms.ModelForm):
 
 class CustomUserCreationForm(UserCreationForm):
     email = forms.EmailField(required=True)
-    class Meta(UserCreationForm.Meta):
+    class Meta:
         model = User
         fields = ("username", "email" , "password1" , "password2")

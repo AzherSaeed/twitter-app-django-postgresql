@@ -49,12 +49,6 @@ def delete_tweet(request , tweet_id):
     return redirect('tweet_list')
 
 
-def personal(request):
-    user = request.user
-    return render(request , "personal.html" , {'user' : user})
-
-
-
 
 def user_register(request):
     if request.method == "POST":
@@ -65,4 +59,4 @@ def user_register(request):
             return redirect("tweet_list")
     else:
         form = UserCreationForm()
-    return render(request , "register.html" , {'form' : form})
+    return render(request , "registration/register.html" , {'form' : form})
