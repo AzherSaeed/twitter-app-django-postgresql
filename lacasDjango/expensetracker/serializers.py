@@ -8,7 +8,7 @@ class TransactionSerializer(serializers.ModelSerializer):
     class Meta:
         model = ExpenseTracker
         fields = [
-            "title",
+            "name",
             "amount",
             "transaction_type"
         ]
