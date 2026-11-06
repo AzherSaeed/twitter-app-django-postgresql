@@ -2,9 +2,11 @@
   "venvPath": ".",
   "venv": ".venv",
   "extraPaths": [
-    "./lacasDjango"
+    "./lacasDjango",
+    "./.venv/lib/python3.13/site-packages"
   ],
   "reportIncompatibleVariableOverride": "none"
 }
+
 
 

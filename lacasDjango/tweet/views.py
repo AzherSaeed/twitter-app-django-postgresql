@@ -6,7 +6,7 @@ from .forms import TweetForm
 from django.contrib.auth.decorators import login_required
 
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import login
+from django.contrib.auth import login , logout
 
 def index(request):
     return render(request, "index.html")
@@ -48,8 +48,6 @@ def delete_tweet(request , tweet_id):
     tweet.delete()
     return redirect('tweet_list')
 
-
-
 def user_register(request):
     if request.method == "POST":
         form = UserCreationForm(request.POST)
@@ -60,3 +58,7 @@ def user_register(request):
     else:
         form = UserCreationForm()
     return render(request , "registration/register.html" , {'form' : form})
+
+def logout_view(request):
+    logout(request)
+    return redirect("tweet_list")

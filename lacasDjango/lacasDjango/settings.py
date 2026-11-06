@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "tweet",
+    "rest_framework",
+    "expensetracker",
 ]
 
 MIDDLEWARE = [
